@@ -1,0 +1,21 @@
+{% extends 'listing/base.html' %}
+
+{% block content %}
+
+{% for message in messages %}
+{{message}}
+{% endfor %}
+
+<h3>Log In</h3>
+
+<form action="" method="post">
+    {% csrf_token %}
+    
+    <input type="text" name="username" placeholder="Username..." class="form-control">
+    <input type="password" name="password" placeholder="Password..." class="form-control">
+    <input type="submit" value="Log in">
+    <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+
+</form>
+
+{% endblock content %}

@@ -1,0 +1,14 @@
+@import "footer.css";
+@import "navbar.css";
+
+html, body {
+    margin: 0;
+}
+
+h2 {
+    color: #e8a75d;
+}
+
+h1 {
+    color: #de9440;
+}

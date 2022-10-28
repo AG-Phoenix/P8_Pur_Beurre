@@ -1,7 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-# Create your views here.
+from django.contrib.auth.decorators import login_required
 
 def index(request):
     return render(request, 'listing/index.html')
+
+@login_required(login_url='login')
+def saved(request):
+    return render(request, 'listing/saved.html')
+
+def legals(request):
+    return render(request, 'listing/legals.html')
