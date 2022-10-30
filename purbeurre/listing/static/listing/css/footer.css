@@ -1,0 +1,18 @@
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color:#345a61;
+}
+
+footer ul {
+    display: grid;
+    grid-auto-flow: column;
+    list-style-type: none;
+    font-size: 16px;
+}
+
+footer > ul > li > a {
+    color: white; 
+    text-decoration: none;
+}

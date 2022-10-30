@@ -1,0 +1,27 @@
+{% load static %}
+<nav class="grid">
+    <ul>
+        <li class="fullwidth">
+            <a href="{% url 'index' %}">
+            <img src="{% static 'listing/images/logo_pur_beurre.svg' %}" alt="logo">
+            Pur Beurre
+            </a>
+        </li>
+        <li class="search"><a href="#">Search</a></li>
+
+        {% if not request.user.is_authenticated %}
+        <li><a href="{% url 'login' %}">Log in</a></li>
+        {% endif %}
+
+        {% if request.user.is_authenticated %}
+        <li>
+            Welcome <a href="{% url 'profile' %}">{{request.user}}!</a>
+        </li>
+        <li><a href="{% url 'saved' %}">My Substitutes</a></li>
+        <li>
+            <a href="{% url 'logout' %}">Log out</a>
+        </li>
+        {% endif %}
+
+    </ul>
+</nav>
