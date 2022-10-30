@@ -7,8 +7,8 @@ def index(request):
     return render(request, 'listing/index.html')
 
 @login_required(login_url='login')
-def saved(request):
+def saved_page(request):
     return render(request, 'listing/saved.html')
 
-def legals(request):
+def legals_page(request):
     return render(request, 'listing/legals.html')
